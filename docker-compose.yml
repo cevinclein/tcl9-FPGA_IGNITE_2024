@@ -1,0 +1,4 @@
+services:
+  app:
+    build: .
+    image: efabless/openlane:2023.07.19-1
