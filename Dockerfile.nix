@@ -1,4 +1,4 @@
-FROM efabless/openlane:2023.07.19-1
+FROM efabless/openlane:latest
 
 RUN nix-env -iA nixpkgs.gnumake 
 RUN nix-env -iA nixpkgs.gcc
