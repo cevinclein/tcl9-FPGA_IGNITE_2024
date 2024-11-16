@@ -7,6 +7,7 @@ RUN nix-env -iA nixpkgs.gawk
 RUN nix-env -iA nixpkgs.zlib
 RUN nix-env -iA nixpkgs.zlib-ng
 
+
 WORKDIR /
 RUN git clone https://github.com/madler/zlib.git
 WORKDIR /zlib
@@ -38,3 +39,12 @@ RUN make install
 
 ENV PATH=/tcl9.0.0/unix:$PATH
 
+WORKDIR /
+
+RUN git clone https://github.com/tcltk/tcllib.git
+
+RUN yes | tclsh /tcllib/installer.tcl
+
+RUN nix-env -iA nixpkgs.python312Packages.pip
+
+RUN pip install --break-system-packages click PyYAML

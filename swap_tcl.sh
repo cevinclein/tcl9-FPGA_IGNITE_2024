@@ -13,7 +13,12 @@ if [ "$1" == "tcl8" ]; then
   docker pull efabless/openlane:2023.07.19-1
 elif [ "$1" == "tcl9" ]; then
   echo "Building image locally for tcl9..."
-  docker build -t efabless/openlane:2023.07.19-1 .
+  docker build -t efabless/openlane:2023.07.19-1 -f Dockerfile .
+elif [ "$1" == "tcl9-latimg" ]; then
+  echo "Building image locally for tcl9 with openlane latest tag..."
+  docker build -t efabless/openlane:2023.07.19-1 -f Dockerfile.nix .
+elif [ "$1" == "tcl-vers" ]; then
+  echo 'puts [info patchlevel]' | docker run --rm -i efabless/openlane:2023.07.19-1 tclsh
 else
   echo "Invalid option: $1"
   echo "Options: tcl8 | tcl9"
