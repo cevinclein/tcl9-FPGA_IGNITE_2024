@@ -10,7 +10,7 @@ The following is recommended. This swaps the tcl version
 to tcl 9 and update the openlane image to the latest version.
 With this the following errors should be fixed:
 
-https://github.com/The-OpenROAD-Project/OpenLane/issues/914
+https://github.com/The-OpenROAD-Project/OpenLane/issues/914 <br>
 https://github.com/The-OpenROAD-Project/OpenLane/issues/1489
 
 ```bash
