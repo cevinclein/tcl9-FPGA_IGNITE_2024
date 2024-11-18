@@ -7,7 +7,7 @@ script anywhere on the system.
 ## Quick start
 
 The following is recommended. This swaps the tcl version
-to tcl 9 and update the openlane image to the latest version.
+to tcl 9.
 With this the following errors should be fixed:
 
 https://github.com/The-OpenROAD-Project/OpenLane/issues/914 <br>
@@ -18,10 +18,11 @@ git clone https://github.com/cevinclein/tcl9-FPGA_IGNITE_2024.git
 cd tcl9-FPGA_IGNITE_2024
 
 # if your user is not in the docker group use sudo or be root
-./swap_tcl.sh tcl9-latimg 
+./swap_tcl.sh tcl9 
+./swap_tcl.sh tcl-vers
 ``` 
 
-## Swap to tcl 9 run:
+## Swap to tcl 9 run (recommended):
 
 ```bash
 ./swap_tcl.sh tcl9
@@ -33,7 +34,7 @@ cd tcl9-FPGA_IGNITE_2024
 ./swap_tcl.sh tcl8
 ```
 
-## Use the newest openlane image with tcl 9 run (recommended):
+## Use the newest openlane image with tcl 9 run (you need to try if this also works):
 
 ```bash
 ./swap_tcl.sh tcl9-latimg
