@@ -63,3 +63,6 @@ WORKDIR /
 RUN yes | tclsh /tcllib/installer.tcl
 
 RUN pip install click PyYAML
+
+COPY /fcpys/emitter.py /openlane/dependencies/includedyaml/emitter.py
+COPY /fcpys/tool.py /openlane/dependencies/tool.py
