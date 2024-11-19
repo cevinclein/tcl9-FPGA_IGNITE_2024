@@ -1,5 +1,7 @@
 FROM efabless/openlane:2023.07.19-1
 
+# -----------------------------------------
+
 WORKDIR /
 
 ENV MINICONDA_VERSION=latest
