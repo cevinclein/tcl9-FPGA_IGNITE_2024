@@ -5,7 +5,7 @@
 # sequence ::= SEQUENCE-START node* SEQUENCE-END
 # mapping ::= MAPPING-START (node node)* MAPPING-END
 
-# patched file: 73cbe2b
+# patched file:  73cbe2b
 
 __all__ = ["Emitter", "EmitterError"]
 
